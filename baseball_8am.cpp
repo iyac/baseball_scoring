@@ -4,11 +4,11 @@ int getNum(void);
 
 int main(void)
 {
-	printf("Enter a number\n");
-	int number = 0;
-	number = getNum();
+	printf("Enter a visitors' score\n");
+	int visitors = 0;
+	visitors = getNum();
 	
-	printf("The number is %d\n", number);
+	printf("The visitors' score is %d\n", visitors);
 	return 0;
 }
 
