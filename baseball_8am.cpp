@@ -4,7 +4,11 @@ int getNum(void);
 
 int main(void)
 {
-	getNum();
+	printf("Enter a number\n");
+	int number = 0;
+	number = getNum();
+	
+	printf("The number is %d\n", number);
 	return 0;
 }
 
