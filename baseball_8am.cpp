@@ -1,8 +1,10 @@
 #include <stdio.h>
 
+int getNum(void);
+
 int main(void)
 {
-	printf("This program does nothing except display this message\n");
+	getNum();
 	return 0;
 }
 
