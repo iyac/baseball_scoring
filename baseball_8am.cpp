@@ -9,6 +9,13 @@ int main(void)
 	visitors = getNum();
 	
 	printf("The visitors' score is %d\n", visitors);
+
+	printf("Enter the home team's score\n");
+	int home = 0;
+	home = getNum();
+
+	printf("The home team's score is %d\n", home);
+
 	return 0;
 }
 
