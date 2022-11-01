@@ -4,18 +4,31 @@ int getNum(void);
 
 int main(void)
 {
-	printf("Enter a visitors' score\n");
-	int visitors = 0;
-	visitors = getNum();
+	int inning = 1;
 	
-	printf("The visitors' score is %d\n", visitors);
+	// loop for 9 innings
+	while (inning <= 9)
+	{
+		printf("Inning % d:\n", inning);
+		
 
-	printf("Enter the home team's score\n");
-	int home = 0;
-	home = getNum();
+		// get a visitors' score
+		printf("Enter a visitors' score\n");
+		int visitors = 0;
+		visitors = getNum();
 
-	printf("The home team's score is %d\n", home);
+		printf("The visitors' score is %d\n", visitors);
 
+		// get a home team score
+		printf("Enter the home team's score\n");
+		int home = 0;
+		home = getNum();
+
+		printf("The home team's score is %d\n", home);
+
+		++inning;
+	}
+	
 	return 0;
 }
 
