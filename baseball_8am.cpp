@@ -28,7 +28,7 @@ int main(void)
 		printf("The visitors' total score is %d\n", visitorScore);
 
 		// get a home team score
-		printf("Enter the home team's score\n");
+		printf("\nEnter the home team's score\n");
 		int home = 0;
 		home = getNum();
 
@@ -39,8 +39,23 @@ int main(void)
 		printf("The home total score is %d\n", homeScore);
 
 		++inning;
+
+		// space out the output with two blank lines after each inning
+		printf("\n\n");
 	}
 	
+	// determine who won the game
+	if (homeScore > visitorScore)
+	{
+		// home team won
+		printf("\n\nhome won %d-%d\n", homeScore, visitorScore);
+	}
+	else
+	{
+		// visiting team won
+		printf("\n\nvisitor won %d-%d\n", visitorScore, homeScore);
+	}
+
 	return 0;
 }
 
