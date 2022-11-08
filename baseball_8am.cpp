@@ -6,6 +6,7 @@ int main(void)
 {
 	int inning = 1;
 	int visitorScore = 0;
+	int homeScore = 0;
 	
 	
 	// loop for 9 innings
@@ -31,7 +32,11 @@ int main(void)
 		int home = 0;
 		home = getNum();
 
+		// keep track of the total home score
+		homeScore += home;
+
 		printf("The home team's score is %d\n", home);
+		printf("The home total score is %d\n", homeScore);
 
 		++inning;
 	}
