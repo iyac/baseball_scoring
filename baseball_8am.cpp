@@ -5,10 +5,13 @@ int getNum(void);
 int main(void)
 {
 	int inning = 1;
+	int visitorScore = 0;
+	
 	
 	// loop for 9 innings
 	while (inning <= 9)
 	{
+		
 		printf("Inning % d:\n", inning);
 		
 
@@ -17,7 +20,11 @@ int main(void)
 		int visitors = 0;
 		visitors = getNum();
 
-		printf("The visitors' score is %d\n", visitors);
+		// keep track of the total visitors' score
+		visitorScore += visitors;
+
+		printf("The visitors' score for this inning is %d\n", visitors);
+		printf("The visitors' total score is %d\n", visitorScore);
 
 		// get a home team score
 		printf("Enter the home team's score\n");
