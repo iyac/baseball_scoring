@@ -7,6 +7,7 @@ int main(void)
 	int inning = 1;
 	int visitorScore = 0;
 	int homeScore = 0;
+	bool rainOccurred = false;
 	
 	
 	// loop for 9 innings
@@ -21,6 +22,14 @@ int main(void)
 		printf("Enter a visitors' score\n");
 		int visitors = 0;
 		visitors = getNum();
+
+		// check for rainout
+		if (visitors < 0)
+		{
+			printf("Rain stopped the game\n");
+			rainOccurred = true;
+			break;
+		}
 
 		// keep track of the total visitors' score
 		visitorScore += visitors;
@@ -58,15 +67,18 @@ int main(void)
 	}
 	
 	// determine who won the game
-	if (homeScore > visitorScore)
+	if (rainOccurred == false)
 	{
-		// home team won
-		printf("\n\nhome won %d-%d\n", homeScore, visitorScore);
-	}
-	else
-	{
-		// visiting team won
-		printf("\n\nvisitor won %d-%d\n", visitorScore, homeScore);
+		if (homeScore > visitorScore)
+		{
+			// home team won
+			printf("\n\nhome won %d-%d\n", homeScore, visitorScore);
+		}
+		else
+		{
+			// visiting team won
+			printf("\n\nvisitor won %d-%d\n", visitorScore, homeScore);
+		}
 	}
 
 	return 0;
