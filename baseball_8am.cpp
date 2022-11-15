@@ -12,10 +12,11 @@ int main(void)
 	// loop for 9 innings
 	while (inning <= 9)
 	{
-		
+		// display the inning
 		printf("Inning % d:\n", inning);
 		
 
+		// top half of the inning
 		// get a visitors' score
 		printf("Enter a visitors' score\n");
 		int visitors = 0;
@@ -27,6 +28,16 @@ int main(void)
 		printf("The visitors' score for this inning is %d\n", visitors);
 		printf("The visitors' total score is %d\n", visitorScore);
 
+
+		// determine if the visitors have lost the game because
+		//	they are losing after the top half of the 9th inning
+		if ((inning == 9) && (homeScore > visitorScore))
+		{
+			break;
+		}
+
+
+		// bottom half of the inning
 		// get a home team score
 		printf("\nEnter the home team's score\n");
 		int home = 0;
@@ -35,9 +46,11 @@ int main(void)
 		// keep track of the total home score
 		homeScore += home;
 
-		printf("The home team's score is %d\n", home);
+		printf("The home team's score for this inning is %d\n", home);
 		printf("The home total score is %d\n", homeScore);
 
+
+		// we are done the inning so increase the inning and space out the output
 		++inning;
 
 		// space out the output with two blank lines after each inning
