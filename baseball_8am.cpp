@@ -52,6 +52,14 @@ int main(void)
 		int home = 0;
 		home = getNum();
 
+		// check for rainout
+		if (home < 0)
+		{
+			printf("Rain stopped the game\n");
+			rainOccurred = true;
+			break;
+		}
+
 		// keep track of the total home score
 		homeScore += home;
 
